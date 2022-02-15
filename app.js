@@ -123,7 +123,7 @@ app.get(`/orders`,(req,res)=>{
     if(email){
         query={"email":email}
     }
-    db.collection(`Orders`).find(query).toArray((err,result)=>{
+    db.collection(`orders`).find(query).toArray((err,result)=>{
         if(err) throw err;
         res.send(result);
     })
